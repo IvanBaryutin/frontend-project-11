@@ -4,5 +4,11 @@ install:
 lint:
 	npx eslint .
 
+build:
+	rm -rf dist && NODE_ENV=production npx webpack
+
+dev:
+	npx webpack serve
+
 test-coverage:
 	npm run test-coverage
