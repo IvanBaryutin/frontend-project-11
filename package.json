@@ -1,11 +1,16 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/IvanBaryutin/frontend-project-11/workflows/hexlet-check/badge.svg)](https://github.com/IvanBaryutin/frontend-project-11/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/e31e43bf38821ed179c3/maintainability)](https://codeclimate.com/github/IvanBaryutin/frontend-project-11/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e31e43bf38821ed179c3/test_coverage)](https://codeclimate.com/github/IvanBaryutin/frontend-project-11/test_coverage)",
+  "description": "My webpack project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-coverage": "jest --coverage"
+    "test-coverage": "jest --coverage",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -18,10 +23,16 @@
   },
   "homepage": "https://github.com/IvanBaryutin/frontend-project-11#readme",
   "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "html-webpack-plugin": "^5.5.3",
     "jest": "^29.5.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "workbox-webpack-plugin": "^7.0.0"
   }
 }
